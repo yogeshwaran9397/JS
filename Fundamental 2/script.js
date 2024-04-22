@@ -29,7 +29,6 @@ function UpdateHelloWorld() {
         element.textContent = "Hello World!";
     else
         element.textContent = "Hello Yogesh!";
-
 }
 
 
@@ -51,7 +50,7 @@ console.log(friends);
 console.log(friends.length);
 
 if (friends.includes("Yogesh")) {
-    console.log("friends contain Yogesh");
+    console.log("friends contain Yogesh 👀");
 }
 else {
     console.log("friends not contain Yogesh");
@@ -67,25 +66,25 @@ else {
 
 const array = [1, 2, 3, 4, 5];
 array.splice(0, 2, 'a', 'b');
-console.log(array);
+console.log(array); // a b 3 4 5 
 
 const array2 = [1, 2, 3, 4, 5];
 const data = array2.slice(0, 2);
-console.log(data);
+console.log(data); //1 2 
 
 
 //Objects 
 
 Person = {
-    FirstName :'Yogesh',
-    LastName :'V',
-    Address : `3rd Cross, Blr-57`,
+    FirstName: 'Yogesh',
+    LastName: 'V',
+    Address: `3rd Cross, Blr-57`,
     Company: `GRL`,
-    friends : ['Bala','Balaji','Gokul'],
-    DOB : 1997
+    friends: ['Bala', 'Balaji', 'Gokul'],
+    DOB: 1997
 }
 
-console.log(`${Person.FirstName} ${Person.LastName} is from ${Person.Address} who is working in ${Person.Company} having friends ${Person.friends[0]}, ${Person.friends[1]}`);
+console.log(`${Person.FirstName} ${Person.LastName} ✔ is from ${Person.Address} who is working in ${Person.Company} having friends ${Person.friends[0]}, ${Person.friends[1]}`);
 console.log(`${Person.Education}`);
 
 //Add Education 
@@ -94,5 +93,29 @@ console.log(`${Person.Education}`);
 
 Person['Salary'] = 10000000;
 console.log(`${Person['Salary']}`);
+
+
+const arrayData = [];
+for (let a = 0; a <= 10; a++) {
+    arrayData[a] = a;
+}
+
+let arrayDataStr = '';
+let count = 0;
+while (count < arrayData.length) {
+    arrayDataStr = arrayDataStr + arrayData[count];
+    count++;
+}
+console.log(arrayDataStr);
+
+
+//Random 
+
+function Random(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+console.log(Random(0, 10));
+
 
 
