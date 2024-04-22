@@ -1,0 +1,22 @@
+.coinflip
+{
+    margin: 50px;
+    /* border: 500px; */
+    /* align-content: center; */
+    text-align: center;
+    padding: 10px;
+}
+
+.coinImage
+{
+    margin: 10px;
+}
+
+.flip
+{
+    margin: 50px;
+    border-radius: 10px;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
