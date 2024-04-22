@@ -1,0 +1,19 @@
+.guessid
+{
+    margin: auto;
+    align-content: center;
+}
+.secret {
+    border: 1px solid black;
+    /* margin: auto; */
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    padding: 10px;
+}
+
+.guess
+{
+    height: 30px;
+    width: 30px;
+}
