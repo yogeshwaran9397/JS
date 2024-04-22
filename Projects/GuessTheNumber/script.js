@@ -1,5 +1,5 @@
 // Get the random number
-let randomNumber = Math.floor(Math.random() * 10);
+let randomNumber = Math.floor(Math.random() * 10) + 1;
 let startingScore = 20;
 document.querySelector('.score').textContent = startingScore;
 console.log(randomNumber);
@@ -14,18 +14,22 @@ document.querySelector('.check').addEventListener('click', function () {
             document.querySelector('.secret').textContent = randomNumber;
             document.querySelector('.message').textContent = "Correct Guess! 👏";
             startingScore++;
+            document.querySelector('.guess').value = "";
+            document.querySelector('body').style.backgroundColor = 'green';
         } else {
             document.querySelector('.message').textContent = "Wrong Guess! 👀";
             startingScore--;
+            document.querySelector('body').style.backgroundColor = 'red';
         }
         document.querySelector('.score').textContent = startingScore;
     }
 });
 
 document.querySelector('.again').addEventListener('click', function () {
-    randomNumber = Math.floor(Math.random() * 10);
+    randomNumber = Math.floor(Math.random() * 10) + 1;
     console.log(randomNumber);
     document.querySelector('.message').textContent = "";
     document.querySelector('.secret').textContent = "?";
+    document.querySelector('body').style.background= '#f5f5f6';
 });
 
