@@ -1,5 +1,5 @@
 // Get the random number
-let randomNumber = Math.floor(Math.random() * 10) + 1;
+let randomNumber = generateRandomNumber();
 let startingScore = 20;
 document.querySelector('.score').textContent = startingScore;
 console.log(randomNumber);
@@ -25,11 +25,24 @@ document.querySelector('.check').addEventListener('click', function () {
     }
 });
 
-document.querySelector('.again').addEventListener('click', function () {
-    randomNumber = Math.floor(Math.random() * 10) + 1;
+document.querySelector('.again').addEventListener('click', again());
+
+document.addEventListener('keydown', function (e) {
+
+    if (e.key === 'Escape') {
+        again();
+    }
+});
+
+
+function generateRandomNumber() {
+    return Math.floor(Math.random() * 10) + 1;
+}
+
+function again() {
+    randomNumber = generateRandomNumber();
     console.log(randomNumber);
     document.querySelector('.message').textContent = "";
     document.querySelector('.secret').textContent = "?";
-    document.querySelector('body').style.background= '#f5f5f6';
-});
-
+    document.querySelector('body').style.background = '#f5f5f6';
+}
