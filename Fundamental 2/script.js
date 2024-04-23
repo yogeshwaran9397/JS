@@ -118,4 +118,17 @@ function Random(min, max) {
 console.log(Random(0, 10));
 
 
+//Hoisting and TDZ 
+
+const name = "Yogesh"
+
+if(name === 'Yogesh')
+{
+    //console.log(`Yogesh job is ${job}`); //uncomment this and you will get -  Uncaught ReferenceError: Cannot access 'job' before initialization
+    var age = 28;
+    const job = 'Engineer';
+}
+console.log(`age is ${age}`); // age will be access as var is function scoped 
+//console.log(`job is ${job}`);//uncomment this and you will get -  Uncaught ReferenceError: job is not defined
+
 
