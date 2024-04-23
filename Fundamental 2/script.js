@@ -122,8 +122,7 @@ console.log(Random(0, 10));
 
 const name = "Yogesh"
 
-if(name === 'Yogesh')
-{
+if (name === 'Yogesh') {
     //console.log(`Yogesh job is ${job}`); //uncomment this and you will get -  Uncaught ReferenceError: Cannot access 'job' before initialization
     var age = 28;
     const job = 'Engineer';
