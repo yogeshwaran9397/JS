@@ -131,3 +131,10 @@ console.log(`age is ${age}`); // age will be access as var is function scoped
 //console.log(`job is ${job}`);//uncomment this and you will get -  Uncaught ReferenceError: job is not defined
 
 
+//Spread Operator 
+
+let array0 = [1,2,3,4];
+let array1 = [5,6,7,8];
+
+let combinedArray = [...array0, ...array1];
+console.log(`array0: (${array0}) + array1: (${array1}) \n= ${combinedArray}`);
