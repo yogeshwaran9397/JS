@@ -133,8 +133,93 @@ console.log(`age is ${age}`); // age will be access as var is function scoped
 
 //Spread Operator 
 
-let array0 = [1,2,3,4];
-let array1 = [5,6,7,8];
+let array0 = [1, 2, 3, 4];
+let array1 = [5, 6, 7, 8];
 
 let combinedArray = [...array0, ...array1];
 console.log(`array0: (${array0}) + array1: (${array1}) \n= ${combinedArray}`);
+
+
+function MergeArraySort(arrayM, arrayN, M, N) {
+    let arrayM1 = arrayM.slice(0, M);
+    console.log(arrayM1);
+
+    let arrayN1 = arrayN.slice(0, N);
+    console.log(arrayN1);
+
+    let arrayCombine = arrayM1.concat(arrayN1).sort();
+    console.log(arrayCombine);
+}
+
+
+console.log("Prblm 1 ")
+let arrayM = [1, 2, 3, 4, 0, 0, 0];
+let M = 3;
+let arrayN = [4, 5, 6, 0];
+let N = 4;
+
+MergeArraySort(arrayM, arrayN, M, N)
+
+
+
+RemoveElement = (array, removeEle) => {
+
+    let newArray = new Array()
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i] != removeEle) {
+            newArray[i] = array[i];
+        }
+    }
+    console.log(newArray);
+}
+
+console.log("Prblm 2")
+let arrayEle = [3, 2, 2, 3];
+let removeEle = 3;
+RemoveElement(arrayEle, removeEle);
+
+console.log("Prblm 3")
+let arrayWithDupl = [1, 1, 1, 2, 2, 3, 3, 4, 5, 6, 7, 7, 8];
+console.log(...new Set(arrayWithDupl));
+
+console.log("Prblm 4")
+
+function FindNumofIterations(array, val) {
+    //console.log(`${array} and ${val}`);
+    let countVal = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === val) {
+            countVal++;
+        }
+    }
+    //console.log(countVal)
+    return countVal;
+}
+
+DuplicateFor2Times = (array) => {
+
+    let returnArray = new Array();
+    let distinctEle = Array.from(new Set(array));
+    //console.log(distinctEle);
+
+    for (let i = 0; i < distinctEle.length; i++) {
+
+        let value = FindNumofIterations(array, distinctEle[i]);
+
+        if (value >= 2) {
+            returnArray.push(distinctEle[i]);            
+            returnArray.push(distinctEle[i]);
+        }
+        else {
+            returnArray.push(distinctEle[i]);
+        }
+    }
+    console.log(returnArray);
+
+}
+
+let arrayElements = [1, 1, 1, 2, 2, 2, 3,3,3, 4, 5];
+DuplicateFor2Times(arrayElements);
+
+
