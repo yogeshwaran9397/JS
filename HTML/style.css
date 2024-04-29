@@ -1,0 +1,32 @@
+body {
+    background-color: darkcyan;
+    align-items: center;
+}
+
+#para1,
+#pre1 {
+    align-items: center;
+    /* background-color: brown; */
+}
+
+#para1 {
+
+    background-color: yellow;
+}
+
+#pre1 {
+
+    background-color: aqua;
+    /* background-position: right top; */
+    /* background-image: ; */
+
+}
+
+#div1
+{
+    border: 1px;
+    border-color: black;
+    border-style: dashed;
+    margin: 25px;
+    padding: 10px;
+}

@@ -1,0 +1,45 @@
+~ CSS     
+~ Syntax
+
+~ CSS Selector 
+        https://guinatal.github.io/understanding-css-combinators/
+
+~ CSS Colors
+~ CSS fonts 
+
+~ Background
+    ~ background-image
+    ~ background-repeat
+    ~ background-attachment 
+    ~ background-position
+
+~ CSS box model 
+~ CSS box sizing 
+~ CSS border 
+~ CSS margin
+~ CSS Size 
+
+CSS positions
+    https://www.youtube.com/watch?v=G4AWXOr4W-k
+CSS Units 
+
+CSS Layout 
+CSS tablestyle
+CSS display property
+    https://youtu.be/9T8uxp5hQ60
+    https://www.youtube.com/watch?v=oJe8G5XT_v4
+
+CSS flexbox
+CSS overflow
+
+CSS grid
+CSS opacity
+
+CSS Pseudo classes
+CSS Pseudo Element
+
+CSS Transition
+CSS Animation
+CSS Gradients 
+
+Responsive layout
