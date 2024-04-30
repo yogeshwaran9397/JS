@@ -30,6 +30,8 @@ CSS display property
     https://www.youtube.com/watch?v=oJe8G5XT_v4
 
 CSS flexbox
+    https://www.youtube.com/watch?v=GteJWhCikCk
+    https://marina-ferreira.github.io/tutorials/css/flexbox/
 CSS overflow
 
 CSS grid
