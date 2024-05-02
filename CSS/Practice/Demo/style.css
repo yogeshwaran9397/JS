@@ -1,0 +1,90 @@
+#para {
+    position: relative;
+    border-style: solid;
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    height: 100px;
+    left: 100px;
+    float: left;
+}
+
+#para1 {
+
+    position: static;
+    height: 50px;
+    width: 50px;
+    border-style: solid;
+    background-color: rebeccapurple;
+    top: 50px;
+    left: 50px;
+}
+
+
+.profile {
+    font-size: 1.1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    display: flex;
+    flex-direction: row;    
+}
+
+.section1,
+.section2 {
+    border-radius: 5px;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;     
+}
+
+
+
+/* Styles for the profile2 container */
+.profile2 {
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styles for the header */
+.profile2 .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styles for the center content */
+.profile2 .center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for the navbar */
+.profile2 .navbar {
+    float: left;
+    width: 30%; /* Adjust width as needed */
+    margin-right: 20px;
+}
+
+/* Styles for individual options in the navbar */
+.profile2 .navbar div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styles for the footer */
+.profile2 .footer {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
