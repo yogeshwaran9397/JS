@@ -58,7 +58,7 @@
     /* Take up remaining space */
     overflow-y: auto;
     /* Vertical scroll if content overflows */
-    max-height: 450px;
+    max-height: 61vh;
     /* Set a maximum height for the content */
     padding: 0 2vw;
     /* Responsive padding */
