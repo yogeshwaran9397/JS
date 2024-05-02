@@ -22,6 +22,7 @@
 CSS positions
     https://www.youtube.com/watch?v=G4AWXOr4W-k
 CSS Units 
+    https://res.cloudinary.com/practicaldev/image/fetch/s--a4-V95uf--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2v0z3jkdsqzhgi7kfcj5.png
 
 CSS Layout 
 CSS tablestyle

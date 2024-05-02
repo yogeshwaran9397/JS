@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    font-size: 2.5vw;
+    /* Responsive font size */
+    padding: 1.5vw 3vw;
+    /* Responsive padding */
+    text-align: center;
+    background-color: white;
+}
+
+.navbar {
+    background-color: black;
+    height: 5vh;
+    /* Responsive height */
+    overflow: hidden;
+    padding: 0 2vw;
+    /* Responsive padding */
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5vw;
+    /* Responsive padding */
+    font-size: 1.5vw;
+    /* Responsive font size */
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar .link-float-right {
+    margin-left: auto;
+    /* Pushes the link to the right */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+}
+
+.left-content {
+    flex: 1;
+    /* Take up remaining space */
+    overflow-y: auto;
+    /* Vertical scroll if content overflows */
+    max-height: 61vh;
+    /* Set a maximum height for the content */
+    padding: 0 2vw;
+    /* Responsive padding */
+
+}
+
+.left-content a {
+    font-size: 1.5vw;
+    /* Responsive font size */
+}
+
+.right-content {
+    flex-basis: 25%;
+    /* Set initial width */
+    padding: 0 2vw;
+    /* Responsive padding */
+}
+
+.article {
+    margin: 1vw 0;
+    /* Responsive margin */
+    padding-right: 4vw;
+    /* Responsive padding */
+}
+
+.about {
+    text-align: center;
+    margin-top: 2vh;
+    /* Responsive margin */
+}
+
+.naruto {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.footer {
+    font-size: 2.5vw;
+    /* Responsive font size */
+    padding: 0.5vw 1vw;
+    /* Responsive padding */
+    text-align: center;
+    background-color: gray;
+}
