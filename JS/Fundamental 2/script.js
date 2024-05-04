@@ -208,7 +208,7 @@ DuplicateFor2Times = (array) => {
         let value = FindNumofIterations(array, distinctEle[i]);
 
         if (value >= 2) {
-            returnArray.push(distinctEle[i]);            
+            returnArray.push(distinctEle[i]);
             returnArray.push(distinctEle[i]);
         }
         else {
@@ -219,7 +219,114 @@ DuplicateFor2Times = (array) => {
 
 }
 
-let arrayElements = [1, 1, 1, 2, 2, 2, 3,3,3, 4, 5];
+let arrayElements = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 5];
 DuplicateFor2Times(arrayElements);
+
+let sampleObj = {
+    "Name": "Yogesh",
+    "Age": 25,
+
+    normalAccess: function normalAccess() {
+        console.log(this.Name);
+    },
+
+    arrowAccess: () => {
+        console.log(this.Name);
+        // if (this.Name === undefined) {
+        //     console.log(true);
+        // } else {
+        //     console.log(false);
+        // }
+    }
+};
+
+sampleObj.normalAccess(); // Yogesh
+sampleObj.arrowAccess(); // undefined
+
+//for of loop
+const nameValue = "Yogesh";
+for (const char of nameValue)
+    console.log(char);
+
+const myMap = new Map();
+myMap.set('Y', 1);
+myMap.set('o', 2);
+myMap.set('g', 3);
+myMap.set('e', 4);
+myMap.set('s', 5);
+myMap.set('h', 6);
+
+for (const [key, value] of myMap) {
+    console.log(`${key} - ${value}`);
+}
+
+//function returning another function 
+
+function normalFunction1(greeting) {
+    return function normalFunction2(name) {
+        console.log(`${greeting} ${name}`);
+    }
+}
+
+Function1 = (greeting) => {
+    return Function2 = (name) => {
+        console.log(`${greeting} ${name}`);
+    }
+}
+
+console.log(Function1("Hey"));// will return a function 
+
+func1 = Function1("Hey");
+console.log(func1("JavaScript")); // will log the log statement inside the Function2
+
+
+//                                                                 call , apply and bind methods 
+//  | ------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  | call	 | Invokes a function with a specified this value and arguments provided individually.	                                                             |
+//  | ------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  | apply	 | Invokes a function with a specified this value and arguments provided as an array or an array-like object.	                                     |
+//  | ------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  | bind	 | Creates a new function with a specified this value and initial arguments.                                                                         |
+//  |        | Unlike call and apply, bind does not immediately execute the function;                                                                            |
+//  |        | it returns a new function that, when called, has its this keyword set to the provided value. It's useful for creating partially applied functions.|
+//  | ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Indigo =
+{
+    Name: "Indigo",
+    FlightNumber: "481",
+    returnString: function Book(Name) {
+        console.log(`${Name}, Booked ${this.FlightNumber} - ${this.Name}`);
+    }
+}
+ 
+//General call 
+console.log(Indigo.returnString("John"));
+
+AirIndia =
+{
+    Name: "AirIndia",
+    FlightNumber: "547",
+}
+
+//call method 
+let booking = Indigo.returnString;
+booking.call(AirIndia, "Andy"); // need to pass the this param and then the params need to be mapped 
+
+//apply method 
+booking.apply(AirIndia, ["Mark"]); // need to pass the this param and then a array of element need to be mapped 
+
+//bind method 
+const book = booking.bind(AirIndia); // first it will return a function which is binded with the this param 
+book("Sam"); // and then we can call the respective method 
+
+
+
+
+
+
+
+
+
 
 
