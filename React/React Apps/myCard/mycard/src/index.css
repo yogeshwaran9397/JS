@@ -3,8 +3,7 @@ body {
   background-color: rgb(121, 165, 237);
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: center;  
   margin: 0;
 }
 
@@ -21,10 +20,9 @@ body {
   justify-content: center;
 }
 
-maincard-container
+.maincard-container
 {
-  /* display: flex;
-  float: left; */
+  
   margin-top: 10px;
   padding: 10px;
 }
