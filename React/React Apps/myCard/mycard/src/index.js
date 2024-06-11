@@ -158,7 +158,7 @@ root.render(
             skills={
               <ol>
                 {x.skills.map((skill) => (
-                  <ul key={skill}>{skill}</ul>
+                  <ul>{skill}</ul>
                 ))}
               </ol>
             }
