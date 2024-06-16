@@ -38,7 +38,7 @@ function loadTaskDetail() {
     // Create task detail description
     var taskDetailP = document.createElement("p");
     taskDetailP.className = "task-detail-desc";
-    taskDetailP.innerHTML  = updateStatusOfTask(task);
+    taskDetailP.innerHTML = updateStatusOfTask(task);
 
     // Create Done button
     var doneButton = document.createElement("button");
@@ -46,8 +46,8 @@ function loadTaskDetail() {
     doneButton.textContent = "Done";
     doneButton.dataset.taskId = task.TaskID;
     doneButton.addEventListener("click", function (event) {
-        var taskId = event.target.dataset.taskId;
-    //   console.log(taskId);
+      var taskId = event.target.dataset.taskId;
+      //   console.log(taskId);
       markTaskDone(taskId);
       loadTaskDetail();
     });
@@ -59,7 +59,7 @@ function loadTaskDetail() {
     deleteButton.textContent = "Delete";
     deleteButton.addEventListener("click", function (event) {
       var taskId = event.target.dataset.taskId;
-    //   console.log("Delete clicked for task ID:", taskId);
+      //   console.log("Delete clicked for task ID:", taskId);
       removeTaskNode(taskId);
       loadTaskDetail();
     });
@@ -75,6 +75,10 @@ function loadTaskDetail() {
     // Append list item to the task list container
     taskListContainer.appendChild(ul);
   }
+}
+
+function addNewTask(taskDetail) {
+  updatedTaskList.push(taskDetail);
 }
 
 function getTaskNode(taskID) {
@@ -94,7 +98,7 @@ function removeTaskNode(taskId) {
 }
 
 function markTaskDone(taskID) {
-//   console.log(taskID);
+  //   console.log(taskID);
   var indextoUpdate = getTaskNode(taskID);
   if (indextoUpdate !== -1) {
     updatedTaskList[indextoUpdate].Status = true;
@@ -104,7 +108,7 @@ function markTaskDone(taskID) {
 }
 
 function updateStatusOfTask(taskDetail) {
-    // console.log(taskDetail);
+  // console.log(taskDetail);
   if (taskDetail.Status === false) {
     return taskDetail.TaskDetail;
   } else {
@@ -113,3 +117,34 @@ function updateStatusOfTask(taskDetail) {
 }
 
 loadTaskDetail();
+
+document.addEventListener("DOMContentLoaded", function () {
+  var addButton = document.getElementsByClassName("btn-add-task");
+
+  for (var i = 0; i < addButton.length; i++) {
+    addButton[i].addEventListener("click", function (event) {
+      // console.log("Button Clicked");
+
+      var taskDesc = document.querySelector(".task-desc").value;
+      var taskStartDate = document.querySelector(".task-st-date").value;
+      var taskStopDate = document.querySelector(".task-sp-date").value;
+
+      if (taskDesc === "") {
+        alert("Enter Task Description before clicking Add");
+        return;
+      }
+
+      var newTask = {
+        TaskDetail: taskDesc,
+        TaskID: updatedTaskList[updatedTaskList.length - 1].TaskID + 1,
+        startDate: taskStartDate,
+        stopDate: taskStopDate,
+        Status: false,
+      };
+
+      console.log(newTask);
+      updatedTaskList.push(newTask);
+      loadTaskDetail();
+    });
+  }
+});
