@@ -121,3 +121,30 @@ let promise = new Promise(function (myResolve, myError) {
 });
 
 promise.then(ResolveMethod, ErrorMethod);
+
+
+//Prototype chaining 
+
+function Person(name){
+  this.name = name;
+}
+
+Person.prototype.greet = function() {
+console.log(`Hello, my name is ${this.name}`);
+};
+
+function Devloper(name) 
+{
+  //console.log(name);
+  Person.call(this,name);
+}
+
+Devloper.prototype = Object.create(Person.prototype);
+
+var ObjPerson = new Person("Yogesh");
+ObjPerson.greet();
+
+var ObjDev = new Devloper("waran")
+ObjDev.greet();
+
+

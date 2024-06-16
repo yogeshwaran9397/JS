@@ -1,0 +1,85 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: rgb(228, 228, 236);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  padding: 0px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  background-color: rgb(228, 228, 236);
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  padding: 0px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  padding-top: 60px;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.welcome-text {
+  text-align: center;
+}
+
+.create-region {
+  display: flex;
+  justify-content: center;
+}
+
+.task-desc {
+  height: 30px;
+  width: 50%;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.task-st-date,
+.task-sp-date {
+  height: 30px;
+  width: 10%;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.btn-add-task {
+  font-size: 25px;
+}
+
+.task-list {
+    margin-top: 40px;
+}
+
+.task-detail {
+  display: flex;
+  justify-content: center;  
+  padding-top: 20px;
+}
+
+.task-detail-desc {
+  margin: 0px;
+  font-size: 25px;
+  padding-right: 10px;
+  width: 30%;
+  text-align: left;
+}
+
+.btn-task-Stus {
+  font-size: 20px;
+  height: 30px;
+  margin-right: 10px;
+}
