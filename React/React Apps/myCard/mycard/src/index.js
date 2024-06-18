@@ -129,12 +129,12 @@ function Intro(props) {
 }
 
 function Skills(props) {
-  console.log(props.Skills);
+  // console.log(props.Skills);
   return <div className="skills">{props.Skills}</div>;
 }
 
 function Card(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="card">
       <Avatar image={props.image} />
